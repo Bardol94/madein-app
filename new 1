@@ -1,0 +1,7 @@
+madein-app/
+│── index.html      # Page de connexion
+│── dashboard.html  # Tableau de gestion
+│── style.css       # Fichier CSS global
+│── app.js          # Script JavaScript (login + produits)
+│── assets/         # (Dossier pour images/icônes)
+│── README.md       # Présentation du projet (optionnel)

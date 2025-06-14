@@ -1,0 +1,28 @@
+form.addEventListener("submit", e => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const category = document.getElementById("category").value;
+      const stock = parseInt(document.getElementById("stock").value);
+      const price = parseFloat(document.getElementById("price").value);
+      products.push({ name, category, stock, price });
+      localStorage.setItem("products", JSON.stringify(products));
+      renderTable(products);
+      form.reset();
+    });
+
+    searchInput.addEventListener("input", e => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = products.filter(p =>
+        p.name.toLowerCase().includes(keyword)
+      );
+      renderTable(filtered);
+    });
+
+    logoutBtn.onclick = () => {
+      localStorage.removeItem("logged");
+      location.href = "index.html";
+    };
+  </script>
+
+</body>
+</html>
